@@ -1,0 +1,111 @@
+@media (max-width: 426px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+  }
+  body {
+    background: radial-gradient(circle, #1f3756, #141539);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .head {
+    border: 2px solid #606e85;
+    height: 15%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  .texto {
+    height: 70px;
+    width: 100px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 15px;
+  }
+  .texto .t {
+    height: 20px;
+  }
+  .placar {
+    height: 80%;
+    width: 80px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: 15px;
+  }
+  .placar #text-score {
+    margin-top: 5px;
+    color: #2a46c0;
+    font-size: 12px;
+  }
+  .placar #num-score {
+    color: #3b4363;
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+@media (min-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+  }
+  body {
+    background: radial-gradient(circle, #1f3756, #141539);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  .head {
+    border: 2px solid #606e85;
+    height: 20%;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    border-radius: 20px;
+  }
+  .texto {
+    height: 80%;
+    width: 150px;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 700;
+    margin-left: 25px;
+  }
+  .texto .t {
+    height: 30px;
+  }
+  .placar {
+    height: 70%;
+    width: 120px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    margin-right: 25px;
+  }
+  .placar #text-score {
+    margin-top: 15px;
+    color: #2a46c0;
+  }
+  .placar #num-score {
+    color: #3b4363;
+    font-size: 45px;
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=index.css.map */
