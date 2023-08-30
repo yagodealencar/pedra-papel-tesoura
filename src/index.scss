@@ -118,6 +118,29 @@
     cursor: pointer;
   }
 
+ 
+  
+    #conteudo_inferior{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+    }
+
+    .centro{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .direita, .esquerda{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
 }
 
 

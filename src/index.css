@@ -65,9 +65,7 @@
 }
 
 #conteudoNovo {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 40px;
 }
 #conteudoNovo .te {
@@ -76,10 +74,42 @@
   font-size: 20px;
   color: #ffffff;
 }
+#conteudoNovo #texto1 {
+  grid-area: "text1";
+}
+#conteudoNovo #texto2 {
+  grid-area: "text2";
+}
+#conteudoNovo .item .op1 {
+  grid-area: "option1";
+}
+#conteudoNovo .item .op2 {
+  grid-area: "option2";
+}
 #conteudoNovo .item {
   margin: 0;
   width: 200px;
   height: 200px;
+}
+
+.resultado {
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  grid-area: "result";
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 40px;
+}
+
+#button {
+  grid-area: "button";
+  background-color: #ffffff;
+  color: #fd3e3e;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
 }
 
 @media (min-width: 425px) {
@@ -191,5 +221,23 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+  }
+  #conteudo_inferior {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+  }
+  .centro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .direita, .esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
   }
 }/*# sourceMappingURL=index.css.map */
