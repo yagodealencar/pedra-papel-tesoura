@@ -60,6 +60,28 @@
     height: 180px;
   }
 }
+* {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+#conteudoNovo {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+#conteudoNovo .te {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: #ffffff;
+}
+#conteudoNovo .item {
+  margin: 0;
+  width: 200px;
+  height: 200px;
+}
+
 @media (min-width: 425px) {
   * {
     margin: 0;
@@ -74,7 +96,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 100px;
+    gap: 50px;
     flex-direction: column;
   }
   .head {
@@ -87,16 +109,16 @@
     margin-top: 50px;
     border-radius: 20px;
   }
-  .texto {
+  .head .texto {
     width: 150px;
     height: 80%;
     margin-left: 20px;
   }
-  .texto #imagem {
+  .head .texto #imagem {
     width: 100%;
     height: 100%;
   }
-  .placar {
+  .head .placar {
     width: 150px;
     height: 80%;
     background-color: #ffffff;
@@ -107,18 +129,18 @@
     border-radius: 20px;
     margin-right: 25px;
   }
-  .placar #text-score {
+  .head .placar #text-score {
     margin-top: 10px;
     color: #2a46c0;
   }
-  .placar #num-score {
+  .head .placar #num-score {
     color: #3b4363;
     font-size: 55px;
     font-weight: 700;
   }
   .icones {
-    width: 300px;
-    height: 300px;
+    width: 420px;
+    height: 420px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -134,8 +156,7 @@
     align-items: center;
   }
   #tesoura, #pedra, #papel {
-    position: absolute;
-    border: 18px solid #4865f4;
+    position: relative;
     background-color: #ffffff;
     width: 150px;
     height: 150px;
@@ -143,16 +164,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-90px) translateX(-95px);
     cursor: pointer;
   }
+  #papel {
+    border: 18px solid #4865f4;
+    margin-bottom: 200px;
+  }
   #tesoura {
-    transform: translateY(-90px) translateX(95px);
     border: 18px solid #ec9e0e;
+    margin-bottom: 200px;
   }
   #pedra {
-    transform: translateY(90px);
     border: 18px solid #dc2e4e;
+    margin-top: 200px;
   }
   #rules {
     font-size: 15px;
@@ -160,7 +184,7 @@
     border-radius: 10px;
     color: #ffffff;
     position: absolute;
-    transform: translateY(200px) translateX(650px);
+    transform: translateY(600px) translateX(650px);
     width: 120px;
     height: 40px;
     display: flex;

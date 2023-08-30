@@ -1,4 +1,5 @@
 @import './mobile';
+@import'./style-conteudo2';
 @mixin tamanho($altura,$largura){
   width: $largura;
   height: $altura;
@@ -22,7 +23,7 @@
     background: radial-gradient(circle,#1f3756,#141539);
     @include tamanho(100vh,100%);
     @include display($display:flex,$align:center,$justify:flex-start);
-    gap: 100px;
+    gap: 50px;
     flex-direction: column;
   }
   
@@ -32,38 +33,38 @@
     @include display($display:flex,$align:center,$justify:space-between);
     margin-top: 50px;
     border-radius: 20px;
+
+    .texto{
+      @include tamanho(80%,150px);
+      margin-left: 20px;
+       #imagem{
+        @include tamanho(100%,100%);
+       }
+      }
+      .placar{
+        @include tamanho(80%,150px);
+        background-color: #ffffff;
+        @include display($display:flex,$align:center ,$justify:flex-start);
+        flex-direction: column;
+        border-radius: 20px;
+        margin-right: 25px;
+        #text-score{
+          margin-top: 10px;
+          color: #2a46c0;
+        }
+      
+        #num-score{
+          color: #3b4363;
+          font-size: 55px;
+          font-weight: 700;
+        }
+      }
   }
   
-  .texto{
-  @include tamanho(80%,150px);
-  margin-left: 20px;
-   #imagem{
-    @include tamanho(100%,100%);
-   }
-  }
-  
-  .placar{
-    @include tamanho(80%,150px);
-    background-color: #ffffff;
-    @include display($display:flex,$align:center ,$justify:flex-start);
-    flex-direction: column;
-    border-radius: 20px;
-    margin-right: 25px;
-    #text-score{
-      margin-top: 10px;
-      color: #2a46c0;
-    }
-  
-    #num-score{
-      color: #3b4363;
-      font-size: 55px;
-      font-weight: 700;
-    }
-  }
 
    .icones{
-     @include tamanho(300px, 300px);
-     @include display();
+     @include tamanho(420px, 420px);
+     @include display(flex,center,center);
    }
 
   #triangulo{
@@ -76,28 +77,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
   }
   #tesoura, #pedra, #papel{
-    position: absolute;
-    border: 18px solid #4865f4;
+    position: relative;
     background-color: #ffffff;
     @include tamanho(150px,150px);
     border-radius: 50%;
     @include display();
-    transform: translateY(-90px) translateX(-95px);
+    // transform: translateY(-90px) translateX(-95px);
     cursor: pointer;
   }
 
+  #papel{
+    border: 18px solid #4865f4;
+    margin-bottom: 200px;
+  }
 
   #tesoura{
-    transform: translateY(-90px) translateX(95px);
+    // transform: translateY(-90px) translateX(95px);
     border: 18px solid #ec9e0e;
-    
+    margin-bottom: 200px;
   }
 
   #pedra{
-    transform: translateY(90px);
+    // transform: translateY(90px);
     border: 18px solid #dc2e4e;
+    margin-top: 200px;
   }
 
   #rules{
@@ -106,7 +112,7 @@
     border-radius: 10px;
     color: #ffffff;
     position: absolute;
-    transform: translateY(200px) translateX(650px);
+    transform: translateY(600px) translateX(650px);
     @include tamanho(40px,120px);
     @include display();
     cursor: pointer;
