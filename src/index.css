@@ -74,18 +74,6 @@
   font-size: 20px;
   color: #ffffff;
 }
-#conteudoNovo #texto1 {
-  grid-area: "text1";
-}
-#conteudoNovo #texto2 {
-  grid-area: "text2";
-}
-#conteudoNovo .item .op1 {
-  grid-area: "option1";
-}
-#conteudoNovo .item .op2 {
-  grid-area: "option2";
-}
 #conteudoNovo .item {
   margin: 0;
   width: 200px;
@@ -110,6 +98,8 @@
   width: 200px;
   height: 50px;
   border-radius: 10px;
+  cursor: pointer;
+  border: 1px;
 }
 
 @media (min-width: 425px) {

@@ -13,11 +13,13 @@ let direita = document.createElement('div')
 let pedra = document.getElementById('pedra')
 let papel = document.getElementById('papel')
 let tesoura = document.getElementById('tesoura')
+let triangulo = document.getElementById('triangulo')
 //Clonando elementos para manipulá-los e conservar propriedades originais
 let clonepedra = pedra.cloneNode(true)
 let clonepapel = papel.cloneNode(true)
 let clonetesoura = tesoura.cloneNode(true)
-
+let placar = document.getElementById('num-score')
+let contador = 0
 let idopcao1
 let idopcao2
 
@@ -57,6 +59,8 @@ function check(){
   else if((opcao1.id == 'pedra' && opcao2.id == 'tesoura')||(opcao1.id == 'tesoura' && opcao2.id == 'papel')||
   (opcao1.id == 'papel' && opcao2.id == 'pedra')){
     resultado.textContent = 'YOU WIN'
+    contador++
+    placar.innerText = contador
   }
   else resultado.textContent = 'YOU LOSE'
 }
@@ -66,9 +70,6 @@ pedra.addEventListener('click',()=>{
   escolha()
   check()
 })
-
-
-
 papel.addEventListener('click',()=>{
   opcao1 = papel
   escolha()
@@ -79,8 +80,6 @@ tesoura.addEventListener('click',()=>{
   escolha()
   check()
 })
-
-
 
 function escolha(){
   sorteio()
@@ -98,7 +97,8 @@ function escolha(){
   centro.innerHTML = ''
   direita.innerHTML = ''
   container.innerHTML = ''
-  opcao1 = null
+  conteudo.innerHTML = ''
+  conteudo.append(triangulo,papel,pedra,tesoura)
   container.append(conteudo)
   
 })
