@@ -3,7 +3,8 @@
 @media (min-width:425px){
   .icones{
     @include tamanho(420px, 420px);
-    @include display(flex,center,center);
+    @include display(grid,center,center);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
  #triangulo{
@@ -30,19 +31,25 @@
 
  #papel{
    border: 18px solid #4865f4;
-   margin-bottom: 200px;
+   grid-column: 1;
+   grid-row: 1;
+  //  margin-bottom: 200px;
  }
 
  #tesoura{
    // transform: translateY(-90px) translateX(95px);
    border: 18px solid #ec9e0e;
-   margin-bottom: 200px;
+   grid-column: 3;
+   grid-row: 1;
+  //  margin-bottom: 200px;
  }
 
  #pedra{
    // transform: translateY(90px);
    border: 18px solid #dc2e4e;
-   margin-top: 200px;
+  //  margin-top: 200px;
+  grid-column: 2;
+  grid-row: 3;
  }
 
  #rules{

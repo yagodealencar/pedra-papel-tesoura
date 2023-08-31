@@ -6,18 +6,23 @@
   }
   
   #conteudo_inferior{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 220px;
+  @include tamanho(300px,350px);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
-  .esquerda_direita{
-    @include display(flex,center, center);
-    flex-direction: row;
-    gap: 40px;
+  #container_inferior{
+   
+    margin-top: 0;
   }
+
+  // .esquerda_direita{
+  //   @include display(flex,center, center);
+  //   flex-direction: row;
+  //   gap: 40px;
+  // }
 
   #conteudoNovo{
     @include display(flex,center,center);
@@ -30,19 +35,27 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    grid-column:1 / span 2 ;
   }
 
   .direita, .esquerda{
     display: flex;
     flex-direction: column-reverse;
-    gap: 30px;
+    gap: 10px;
+    grid-row: 1;
+  }
+
+  .esquerda{
+    grid-column: 2;
   }
 
 
 
 
   #conteudoNovo{
-    display:flex;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    
     gap: 40px;
   .texto_opcao{
       display: flex;

@@ -18,6 +18,7 @@ const rules = document.getElementById('rules')
 const closePopupButton = document.getElementById('fecharRegras');
 const imagePopup = document.getElementById('imagePopup');
 
+
 rules.addEventListener('click', () => {
   imagePopup.style.display = 'block';
 });
@@ -40,6 +41,7 @@ let clonetesoura = tesoura.cloneNode(true)
 let placar = document.getElementById('num-score')
 let contador = 0
 let item = document.querySelectorAll('.item')
+let icones = document.querySelector('.icones')
 
 
 textoOpcao1.textContent = 'YOU PICK'
@@ -97,8 +99,7 @@ function escolha(){
   esquerda.append(textoOpcao1,opcao1)
   centro.append(resultado,button)
   direita.append(textoOpcao2,opcao2)
-  esquerda_direita.append(esquerda,direita)
-  conteudoNovo.append(esquerda_direita,centro)
+  conteudoNovo.append(esquerda,centro,direita)
   container.appendChild(conteudoNovo)
 }
 
@@ -108,8 +109,9 @@ function escolha(){
   centro.innerHTML = ''
   direita.innerHTML = ''
   container.innerHTML = ''
-  conteudo.innerHTML = ''
-  conteudo.append(triangulo,papel,pedra,tesoura)
+  conteudo.innerHTML = ''  
+  icones.append(papel,pedra,tesoura)
+  conteudo.append(triangulo,icones)
   container.append(conteudo)
   
 })
