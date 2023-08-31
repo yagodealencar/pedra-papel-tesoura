@@ -1,28 +1,47 @@
-let container = document.getElementById('container_inferior')
-let conteudo = document.getElementById('conteudo_inferior')
-let opcao1
-let textoOpcao1 = document.createElement('p')
-let textoOpcao2 = document.createElement('p')
-let opcao2
-let conteudoNovo = document.createElement('div')
-let resultado = document.createElement('p')
-let button = document.createElement('button')
-let esquerda = document.createElement('div')
-let centro = document.createElement('div')
-let direita = document.createElement('div')
+let opcao1, opcao2
 let pedra = document.getElementById('pedra')
 let papel = document.getElementById('papel')
 let tesoura = document.getElementById('tesoura')
 let triangulo = document.getElementById('triangulo')
+let container = document.getElementById('container_inferior')
+let conteudo = document.getElementById('conteudo_inferior')
+let textoOpcao1 = document.createElement('p')
+let textoOpcao2 = document.createElement('p')
+let resultado = document.createElement('p')
+let conteudoNovo = document.createElement('div')
+let esquerda_direita = document.createElement('div')
+let esquerda = document.createElement('div')
+let centro = document.createElement('div')
+let direita = document.createElement('div')
+let button = document.createElement('button')
+const rules = document.getElementById('rules')
+const closePopupButton = document.getElementById('fecharRegras');
+const imagePopup = document.getElementById('imagePopup');
+
+rules.addEventListener('click', () => {
+  imagePopup.style.display = 'block';
+});
+
+closePopupButton.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+  if (event.target === imagePopup) {
+    imagePopup.style.display = 'none';
+  }
+});
+
+
 //Clonando elementos para manipulá-los e conservar propriedades originais
 let clonepedra = pedra.cloneNode(true)
 let clonepapel = papel.cloneNode(true)
 let clonetesoura = tesoura.cloneNode(true)
 let placar = document.getElementById('num-score')
 let contador = 0
-let idopcao1
-let idopcao2
 let item = document.querySelectorAll('.item')
+
+
 textoOpcao1.textContent = 'YOU PICK'
 textoOpcao1.className = 'texto_opcao'
 textoOpcao2.textContent = 'HOUSE PICK'
@@ -34,7 +53,7 @@ button.textContent = 'PLAY AGAIN'
 centro.className = 'centro'
 direita.className = 'direita'
 esquerda.className = 'esquerda'
-
+esquerda_direita.className = 'esquerda_direita'
 
 
 
@@ -78,7 +97,8 @@ function escolha(){
   esquerda.append(textoOpcao1,opcao1)
   centro.append(resultado,button)
   direita.append(textoOpcao2,opcao2)
-  conteudoNovo.append(esquerda,centro,direita)
+  esquerda_direita.append(esquerda,direita)
+  conteudoNovo.append(esquerda_direita,centro)
   container.appendChild(conteudoNovo)
 }
 

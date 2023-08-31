@@ -1,0 +1,81 @@
+@import './mobileTop';
+
+@media(max-width:426px){
+  *{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  
+  #conteudo_inferior{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 220px;
+  }
+
+  .esquerda_direita{
+    @include display(flex,center, center);
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  #conteudoNovo{
+    @include display(flex,center,center);
+    flex-direction: column;
+  }
+
+  .centro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .direita, .esquerda{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+
+
+
+  #conteudoNovo{
+    display:flex;
+    gap: 40px;
+  .texto_opcao{
+      display: flex;
+      justify-content: center;
+      font-size: 15px;
+      color: #ffffff;
+    
+}
+  
+    .item{
+      margin: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  .resultado{
+    @include tamanho(40px,200px);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    font-size: 40px;
+    font-weight: 700;
+  
+  }
+  
+  #button{
+    background-color: #ffffff;
+    color: #fd3e3e;
+    @include tamanho(50px, 200px);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px;
+  }
+}

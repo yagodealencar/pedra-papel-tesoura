@@ -1,13 +1,25 @@
 @import './mobileTop';
+@media(max-width:426px){
 
-@media (min-width:425px){
+
+
+  .popup img {
+    max-width: 100%;
+    max-height: 100vh;
+  }
+
+  .image_icon{
+    @include tamanho(30px,30px)
+  }
+
+
   .icones{
     @include tamanho(420px, 420px);
     @include display(flex,center,center);
   }
 
  #triangulo{
-   @include tamanho(250px,250px);
+   @include tamanho(150px,150px);
    position: absolute;
  }
 
@@ -21,7 +33,7 @@
  #tesoura, #pedra, #papel{
    position: relative;
    background-color: #ffffff;
-   @include tamanho(150px,150px);
+   @include tamanho(75px,75px);
    border-radius: 50%;
    @include display();
    // transform: translateY(-90px) translateX(-95px);
@@ -29,20 +41,20 @@
  }
 
  #papel{
-   border: 18px solid #4865f4;
-   margin-bottom: 200px;
+   border: 10px solid #4865f4;
+   margin-bottom: 120px;
  }
 
  #tesoura{
    // transform: translateY(-90px) translateX(95px);
-   border: 18px solid #ec9e0e;
-   margin-bottom: 200px;
+   border: 10px solid #ec9e0e;
+   margin-bottom: 120px;
  }
 
  #pedra{
    // transform: translateY(90px);
-   border: 18px solid #dc2e4e;
-   margin-top: 200px;
+   border: 10px solid #dc2e4e;
+   margin-top: 120px;
  }
 
  #rules{
@@ -51,33 +63,11 @@
    border-radius: 10px;
    color: #ffffff;
    position: absolute;
-   transform: translateY(600px) translateX(650px);
+   transform: translateY(600px) translateX(0px);
    @include tamanho(40px,120px);
-   @include display();
+   @include display(flex,center ,center);
    cursor: pointer;
  }
 
-
- 
-   #conteudo_inferior{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 400px;
-   }
-
-   .centro{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     gap: 20px;
-   }
-
-   .direita, .esquerda{
-     display: flex;
-     flex-direction: column;
-     gap: 50px;
-   }
-
 }
+
