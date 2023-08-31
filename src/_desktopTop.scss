@@ -1,0 +1,53 @@
+@import './mobile-page1Top';
+
+@media (min-width:425px){
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  
+  body{
+    background: radial-gradient(circle,#1f3756,#141539);
+    @include tamanho(100vh,100%);
+    @include display($display:flex,$align:center,$justify:flex-start);
+    gap: 50px;
+    flex-direction: column;
+  }
+  
+  .head{
+    border: 2px solid #606e85;
+    @include tamanho(20%,40%);
+    @include display($display:flex,$align:center,$justify:space-between);
+    margin-top: 50px;
+    border-radius: 20px;
+
+    .texto{
+      @include tamanho(80%,150px);
+      margin-left: 20px;
+       #imagem{
+        @include tamanho(100%,100%);
+       }
+      }
+      .placar{
+        @include tamanho(80%,150px);
+        background-color: #ffffff;
+        @include display($display:flex,$align:center ,$justify:flex-start);
+        flex-direction: column;
+        border-radius: 20px;
+        margin-right: 25px;
+        #text-score{
+          margin-top: 10px;
+          color: #2a46c0;
+        }
+      
+        #num-score{
+          color: #3b4363;
+          font-size: 55px;
+          font-weight: 700;
+        }
+      }
+  }
+  
+}

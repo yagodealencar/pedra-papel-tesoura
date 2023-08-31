@@ -1,0 +1,83 @@
+@import './mobile-page1Top';
+
+@media (min-width:425px){
+  .icones{
+    @include tamanho(420px, 420px);
+    @include display(flex,center,center);
+  }
+
+ #triangulo{
+   @include tamanho(250px,250px);
+   position: absolute;
+ }
+
+
+ .item{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+ }
+ #tesoura, #pedra, #papel{
+   position: relative;
+   background-color: #ffffff;
+   @include tamanho(150px,150px);
+   border-radius: 50%;
+   @include display();
+   // transform: translateY(-90px) translateX(-95px);
+   cursor: pointer;
+ }
+
+ #papel{
+   border: 18px solid #4865f4;
+   margin-bottom: 200px;
+ }
+
+ #tesoura{
+   // transform: translateY(-90px) translateX(95px);
+   border: 18px solid #ec9e0e;
+   margin-bottom: 200px;
+ }
+
+ #pedra{
+   // transform: translateY(90px);
+   border: 18px solid #dc2e4e;
+   margin-top: 200px;
+ }
+
+ #rules{
+   font-size: 15px;
+   border: 2px solid #606e85;
+   border-radius: 10px;
+   color: #ffffff;
+   position: absolute;
+   transform: translateY(600px) translateX(650px);
+   @include tamanho(40px,120px);
+   @include display();
+   cursor: pointer;
+ }
+
+
+ 
+   #conteudo_inferior{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 400px;
+   }
+
+   .centro{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 20px;
+   }
+
+   .direita, .esquerda{
+     display: flex;
+     flex-direction: column;
+     gap: 50px;
+   }
+
+}

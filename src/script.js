@@ -22,13 +22,11 @@ let placar = document.getElementById('num-score')
 let contador = 0
 let idopcao1
 let idopcao2
-
+let item = document.querySelectorAll('.item')
 textoOpcao1.textContent = 'YOU PICK'
-textoOpcao1.className = 'te'
-textoOpcao1.id = 'texto1'
+textoOpcao1.className = 'texto_opcao'
 textoOpcao2.textContent = 'HOUSE PICK'
-textoOpcao2.className = 'te'
-textoOpcao2.id = 'texto2'
+textoOpcao2.className = 'texto_opcao'
 conteudoNovo.id = 'conteudoNovo'
 resultado.className = 'resultado'
 button.id = 'button'
@@ -65,21 +63,14 @@ function check(){
   else resultado.textContent = 'YOU LOSE'
 }
 
-pedra.addEventListener('click',()=>{
-  opcao1 = pedra
-  escolha()
-  check()
+item.forEach((elemento)=>{
+  elemento.addEventListener('click',()=>{
+    opcao1 = elemento
+    escolha()
+    check()
+  })
 })
-papel.addEventListener('click',()=>{
-  opcao1 = papel
-  escolha()
-  check()
-})
-tesoura.addEventListener('click',()=>{
-  opcao1 = tesoura
-  escolha()
-  check()
-})
+
 
 function escolha(){
   sorteio()

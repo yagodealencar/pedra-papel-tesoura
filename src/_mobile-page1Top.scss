@@ -1,0 +1,149 @@
+@mixin tamanho($altura,$largura){
+  width: $largura;
+  height: $altura;
+}
+@mixin display($display:flex, $align:center, $justify:center){
+  display: $display;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@media(max-width:426px) {
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+  }
+  
+  body{
+    background: radial-gradient(circle,#1f3756,#141539);
+    @include tamanho(100vh,100%);
+    @include display($display:flex,$align:center,$justify:flex-start);
+    gap: 30px;
+    flex-direction: column;
+  }
+  
+  .head{
+    border: 2px solid #606e85;
+    @include tamanho(110px,85%);
+    @include display($display:flex,$align:center,$justify:space-between);
+    margin-top: 50px;
+    border-radius: 20px;
+
+    .texto{
+      @include tamanho(60%,100px);
+      margin-left: 20px;
+       #imagem{
+        @include tamanho(100%,100%);
+       }
+      }
+      .placar{
+        @include tamanho(90px,90px);
+        background-color: #ffffff;
+        @include display($display:flex,$align:center ,$justify:center);
+        flex-direction: column;
+        border-radius: 20px;
+        margin-right: 10px;
+        #text-score{
+          margin-top: 3px;
+          color: #2a46c0;
+        }
+      
+        #num-score{
+          color: #3b4363;
+          font-size: 35px;
+          font-weight: 700;
+        }
+      }
+  }
+  
+
+   .icones{
+     @include tamanho(420px, 420px);
+     @include display(flex,center,center);
+   }
+
+  #triangulo{
+    @include tamanho(150px,150px);
+    position: absolute;
+  }
+ 
+
+  .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  #tesoura, #pedra, #papel{
+    position: relative;
+    background-color: #ffffff;
+    @include tamanho(75px,75px);
+    border-radius: 50%;
+    @include display();
+    // transform: translateY(-90px) translateX(-95px);
+    cursor: pointer;
+  }
+
+  #papel{
+    border: 10px solid #4865f4;
+    margin-bottom: 120px;
+  }
+
+  #tesoura{
+    // transform: translateY(-90px) translateX(95px);
+    border: 10px solid #ec9e0e;
+    margin-bottom: 120px;
+  }
+
+  #pedra{
+    // transform: translateY(90px);
+    border: 10px solid #dc2e4e;
+    margin-top: 120px;
+  }
+
+  #rules{
+    font-size: 15px;
+    border: 2px solid #606e85;
+    border-radius: 10px;
+    color: #ffffff;
+    position: absolute;
+    transform: translateY(600px) translateX(0px);
+    @include tamanho(40px,120px);
+    @include display(flex,center ,center);
+    cursor: pointer;
+  }
+
+  .image_icon{
+    @include tamanho(30px,30px)
+  }
+ 
+
+
+
+
+  
+  
+    #conteudo_inferior{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+    }
+
+    .centro{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .direita, .esquerda{
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+}
