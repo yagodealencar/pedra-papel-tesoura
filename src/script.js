@@ -73,7 +73,7 @@ esquerda_direita.className = 'esquerda_direita'
 
 function check(){
   if(opcao1.id == opcao2.id){
-    resultado.textContent = 'DRAWN'
+    resultado.textContent = 'DRAW'
   }
   else if((opcao1.id == 'pedra' && opcao2.id == 'tesoura')||(opcao1.id == 'tesoura' && opcao2.id == 'papel')||
   (opcao1.id == 'papel' && opcao2.id == 'pedra')){
