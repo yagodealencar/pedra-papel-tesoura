@@ -44,9 +44,9 @@ let item = document.querySelectorAll('.item')
 let icones = document.querySelector('.icones')
 
 
-textoOpcao1.textContent = 'YOU PICK'
+textoOpcao1.textContent = 'YOU PICKED'
 textoOpcao1.className = 'texto_opcao'
-textoOpcao2.textContent = 'HOUSE PICK'
+textoOpcao2.textContent = 'THE HOUSE PICKED'
 textoOpcao2.className = 'texto_opcao'
 conteudoNovo.id = 'conteudoNovo'
 resultado.className = 'resultado'
