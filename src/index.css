@@ -486,7 +486,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 70px;
   }
   #tesoura, #pedra, #papel {
     position: relative;
@@ -525,7 +525,7 @@
     border-radius: 10px;
     color: #ffffff;
     position: absolute;
-    transform: translateY(650px) translateX(0px);
+    transform: translateY(670px) translateX(0px);
     width: 120px;
     height: 40px;
     display: flex;
