@@ -37,6 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 
@@ -88,7 +89,7 @@
    border-radius: 10px;
    color: #ffffff;
    position: absolute;
-   transform: translateY(560px) translateX(0px);
+   transform: translateY(650px) translateX(0px);
    @include tamanho(40px,120px);
    @include display(flex,center ,center);
    cursor: pointer;
